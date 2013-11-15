@@ -1,4 +1,4 @@
-module DarylJenks
+module DarrylJenks
   class SubstringFinder
     include ::Enumerable
 

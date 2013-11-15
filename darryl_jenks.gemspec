@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'daryl_jenks/version'
+require 'darryl_jenks/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "daryl_jenks"
-  spec.version       = DarylJenks::VERSION
+  spec.name          = "darryl_jenks"
+  spec.version       = DarrylJenks::VERSION
   spec.authors       = ["Brandon Dewitt"]
   spec.email         = ["brandonsdewitt@gmail.com"]
   spec.description   = %q{ Calculates the permutations of a strings based on a key string / regex }

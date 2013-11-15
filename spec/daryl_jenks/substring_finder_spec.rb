@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ::DarylJenks::SubstringFinder do
+describe ::DarrylJenks::SubstringFinder do
   context "#substring_indexes" do
     it "returns an empty array when no occurrences are present" do
       test = described_class.new( " ", "hello" )

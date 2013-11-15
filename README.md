@@ -1,4 +1,4 @@
-# DarylJenks
+# DarrylJenks
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'daryl_jenks'
+    gem 'darryl_jenks'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install daryl_jenks
+    $ gem install darryl_jenks
 
 ## Usage
 

@@ -1,4 +1,4 @@
-module DarylJenks
+module DarrylJenks
   class Permutable
     attr_accessor :key_string
 
