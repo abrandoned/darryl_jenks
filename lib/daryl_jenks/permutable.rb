@@ -28,8 +28,10 @@ module DarylJenks
       
       permutations = []
       split_tokens = self.key_string.split(permutable_key)
+      # At least a single permutation needs to be present
+      number_of_permutations = [(split_tokens.size - 1), 1].max
 
-      permutations_for(split_tokens.size - 1).each do |permutation_pattern|
+      permutations_for(number_of_permutations).each do |permutation_pattern|
         permutation_string = ""
         copied_tokens = split_tokens.map(&:dup)
 
