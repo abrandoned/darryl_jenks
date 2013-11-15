@@ -23,14 +23,13 @@ module DarylJenks
     # The 'substitution_value' is the character that should be used in the permutations of 
     # the string as the separator value
     #
-    def each_permutation(permutable_key, substitution_value)
+    def each_permutation(permutable_key, substitution_value, options = {})
       return unless self.key_string.index(permutable_key)
       
       permutations = []
       split_tokens = self.key_string.split(permutable_key)
-      permutation_patterns = [true, false].repeated_permutation(split_tokens.size - 1).to_a      
 
-      permutation_patterns.each do |permutation_pattern|
+      permutations_for(split_tokens.size - 1).each do |permutation_pattern|
         permutation_string = ""
         copied_tokens = split_tokens.map(&:dup)
 
@@ -40,7 +39,7 @@ module DarylJenks
           if replace_split_token
             permutation_string << substitution_value
           else
-            permutation_string << permutable_key
+            permutation_string << (options[:non_replace_substitution] || permutable_key)
           end
         end
 
@@ -55,6 +54,12 @@ module DarylJenks
       else
         permutations.to_enum
       end
+    end
+
+    private
+
+    def permutations_for(size_of_tokens)
+      [ true, false ].repeated_permutation(size_of_tokens).to_a
     end
 
   end
