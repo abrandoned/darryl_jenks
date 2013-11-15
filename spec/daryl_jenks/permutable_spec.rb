@@ -13,5 +13,4 @@ describe ::DarylJenks::Permutable do
       test.each_permutation(" ", "-", :non_replace_substitution => "R").to_a.should include("helloRworld", "hello-world")
     end
   end
-
 end

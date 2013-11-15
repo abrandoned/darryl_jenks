@@ -63,13 +63,4 @@ module DarylJenks
     end
 
   end
-
-  ##
-  # Pushes onto the trie any permutation of the keystring that can be dasherized
-  #
-  # Ex: key_string = "HELLO WORLDS FIRST S"
-  #
-  # apostrophe permutations = [ "HELLO WORLD'S FIRST S", "HELLO WORLDS FIRST'S", "HELLO WORLD'S FIRST'S" ]
-  #
-
 end
