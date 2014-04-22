@@ -16,6 +16,13 @@ describe ::DarrylJenks::Permutable do
     it "handles trailing permutable keys" do
       test = ::DarrylJenks::Permutable.new("hello ")
       test.each_permutation(" ", "-").to_a.should include("hello ", "hello-")
+      test.each_permutation(" ", "-").to_a.should_not include("hello")
+    end
+
+    it "handles trailing permutable keys after multiple words" do
+      test = ::DarrylJenks::Permutable.new("hello world ")
+      test.each_permutation(" ", "-").to_a.should include("hello world-", "hello-world-","hello-world ")
+      test.each_permutation(" ", "-").to_a.should_not include("hello world")
     end
   end
 end
