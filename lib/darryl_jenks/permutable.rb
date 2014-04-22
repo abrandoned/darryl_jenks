@@ -27,7 +27,7 @@ module DarrylJenks
       return unless self.key_string.index(permutable_key)
       
       permutations = []
-      split_tokens = self.key_string.split(permutable_key)
+      split_tokens = self.key_string.split(permutable_key,-1)
       # At least a single permutation needs to be present
       number_of_permutations = [(split_tokens.size - 1), 1].max
 
